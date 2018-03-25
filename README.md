@@ -27,6 +27,8 @@ Download "telegraf_pi_temp.sh" and 'chmod +x' the script. Then call it from with
 
 **Synology SNMP:**
 
+Based on:
+https://github.com/jperillo/Synology_dashboard_grafana
 
 Make sure snmp-mibs-downloader is already installed. It will download and install additional MIBs during install.
 
