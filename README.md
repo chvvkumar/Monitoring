@@ -66,3 +66,8 @@ then
 5.  Add them to telegraf.conf using examples others have provided elsewhere in this thread
     
 6.  Restart telegraf and test with the '-test' flag. To verify everything is working as expected.
+
+
+**VMWare Monitoring**
+
+https://github.com/Oxalide/vsphere-influxdb-go
