@@ -57,6 +57,7 @@ then
 3.  Obtain your MIBs (from here for example  [http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html](http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html)) and drop them in either of the below locations:
 
     /usr/share/snmp/mibs
+    
     /home/$USER/.snmp/mibs
 
     
