@@ -1,5 +1,11 @@
 # Monitoring
 
+Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
+![Synology Dashboard](https://i.imgur.com/X1DAvjA.png)
+![PiHole Dashboard](https://i.imgur.com/jFb9qKl.png)
+![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
+![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
+
 
 **Monitoring Raspberry Pi stats:**
 
@@ -57,7 +63,6 @@ then
 3.  Obtain your MIBs (from here for example  [http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html](http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html)) and drop them in either of the below locations:
 
     /usr/share/snmp/mibs
-    
     /home/$USER/.snmp/mibs
 
     
@@ -66,7 +71,6 @@ then
 5.  Add them to telegraf.conf using examples others have provided elsewhere in this thread
     
 6.  Restart telegraf and test with the '-test' flag. To verify everything is working as expected.
-
 
 **VMWare Monitoring**
 
