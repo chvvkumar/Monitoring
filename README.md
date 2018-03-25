@@ -1,17 +1,17 @@
 # Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
 
-Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
+## Screenshots:
 ![Synology Dashboard](https://i.imgur.com/X1DAvjA.png)
 ![PiHole Dashboard](https://i.imgur.com/jFb9qKl.png)
 ![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
 ![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
 
 
-**Monitoring Raspberry Pi stats:**
+## **Monitoring Raspberry Pi stats:**
 
 Download "telegraf_pi_temp.sh" and 'chmod +x' the script. Then call it from within telegraf using "[[inputs.exec]]" (already included telegraf.conf in this repo).
 
-**Monitoring PiHole:**
+## **Monitoring PiHole:**
 
  1. Download piholestats.py in this repo to your local machine 
  2. make  piholestats.py executable by "chmod +x" .
@@ -25,7 +25,7 @@ Download "telegraf_pi_temp.sh" and 'chmod +x' the script. Then call it from with
 
  4. Restart telegraf
 
-**Synology SNMP:**
+## **Synology SNMP:**
 
 Based on:
 https://github.com/jperillo/Synology_dashboard_grafana
@@ -74,6 +74,6 @@ then
     
 6.  Restart telegraf and test with the '-test' flag. To verify everything is working as expected.
 
-**VMWare Monitoring**
+## **VMWare Monitoring**
 
 https://github.com/Oxalide/vsphere-influxdb-go
