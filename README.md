@@ -40,7 +40,7 @@ https://justyn.io/blog/monitoring-pihole-with-telegraf-and-influxdb/
 Based on:
 https://github.com/jperillo/Synology_dashboard_grafana
 
-Make sure snmp-mibs-downloader is already installed. It will download and install additional MIBs during install.
+Make sure snmp-mibs-downloader is already installed on your telegraf host. It will download and install additional MIBs during install.
 
     apt-get install snmp-mibs-downloader
 then
