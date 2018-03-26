@@ -12,6 +12,8 @@
 Download "telegraf_pi_temp.sh" and 'chmod +x' the script. Then call it from within telegraf using "[[inputs.exec]]" (already included telegraf.conf in this repo).
 
 ## **Monitoring PiHole:**
+Based on:
+https://justyn.io/blog/monitoring-pihole-with-telegraf-and-influxdb/
 
  1. Download piholestats.py in this repo to your local machine 
  2. make  piholestats.py executable by "chmod +x" .
