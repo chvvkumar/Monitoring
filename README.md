@@ -1,9 +1,17 @@
 # Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
 
 ## Screenshots:
+
+Synology Dashboard
 ![Synology Dashboard](https://i.imgur.com/X1DAvjA.png)
+
+PiHole Dashboard
 ![PiHole Dashboard](https://i.imgur.com/jFb9qKl.png)
+
+ESXi Dashboard
 ![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
+
+Raspberry Pi Dashboard
 ![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
 
 
