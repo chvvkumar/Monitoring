@@ -78,8 +78,13 @@ then
     
 3.  Obtain your MIBs (from here, for example  [http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html](http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html)) and drop them in either of the below locations:
 
-    /usr/share/snmp/mibs,
+
+    user/share/snmp/mibs
+
+or
+
     /home/$USER/.snmp/mibs
+
 
     
 4.  Go through the linked page above or the snmpwalk output and make a list of OIDs you want to monitor (grep is your friend here)
