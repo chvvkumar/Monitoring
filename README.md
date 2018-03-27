@@ -27,11 +27,15 @@ https://justyn.io/blog/monitoring-pihole-with-telegraf-and-influxdb/
  2. make  piholestats.py executable by "chmod +x" .
  3. Add the following to your telegraf.conf inputs
 
-    [[inputs.exec]]
-        commands = ["/bin/piholestats.py"]
-        timeout = "10s"
-        data_format = "json"
-        name_suffix = "_pihole"
+```
+[[inputs.exec]]
+commands = ["/bin/piholestats.py"]
+timeout = "10s"
+data_format = "json"
+name_suffix = "_pihole"
+```
+    
+
 
  4. Restart telegraf
 
