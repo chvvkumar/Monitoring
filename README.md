@@ -76,7 +76,7 @@ then
     
     ```
     
-3.  Obtain your MIBs (from here, for example  [http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html](http://www.oidview.com/mibs/12356/FORTINET-FORTIGATE-MIB.html)) and drop them in either of the below locations:
+3.  Get your MIBs (from here, for Synology  [Synology MIB download](https://global.download.synology.com/download/Document/MIBGuide/Synology_MIB_File.zip)) and drop them in either of the below locations:
 
 
     
