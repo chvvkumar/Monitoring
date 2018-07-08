@@ -125,6 +125,8 @@ In the above snippet, `tcp://synology.lan:2375` Is the end point definition we h
 
 If you want to be doubly sure, you can use https://jsonlint.com to validate the JSON contents.
 
+Once this is done, restart the docker package from within DSM's Package center
+
  **2. On Telegraf:**
 Add the below lines to your input plugins:
 
