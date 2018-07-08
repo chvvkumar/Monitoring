@@ -1,3 +1,4 @@
+**
 # Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
 
 ## Screenshots:
@@ -14,6 +15,8 @@ ESXi Dashboard
 Raspberry Pi Dashboard
 ![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
 
+Docker Dashboard
+![Docker Dashboard](https://i.imgur.com/kgSWrBC.png)
 
 ## **Monitoring Raspberry Pi stats:**
 
@@ -93,3 +96,42 @@ then
 ## **VMWare Monitoring**
 
 https://github.com/Oxalide/vsphere-influxdb-go
+
+## Monitoring Docker:
+
+**
+DockerHost: Synology NAS (DS416Play)
+Telegraf: Raspberry Pi
+
+Since I did not want to mess around with exposing docker.sock file to a remote client, I went with exposing a TCP endpoint on docker host to a remote telegraf agent. 
+
+To do this: 
+ 
+ 
+
+ **1. On Docker Host (Synology):**
+
+Add the endpoint details to /var/packages/Docker/etc/dockerd.json like so:
+
+    admin@DiskStation:~$ cat /var/packages/Docker/etc/dockerd.json
+    {
+    	"hosts" : [ "tcp://synology.lan:2375", "unix:///var/run/docker.sock" ],
+    	"registry-mirrors" : []
+    }
+
+tcp://synology.lan:2375 <- This is the end point definition we added
+Note: Don't change any part of the "unix:///var/run/docker.sock" definition. Synology uses to run the Docker GUI. Also, since this is a JSON file, all lines except the last line have a " , " at the end. Also note the " , " after the TCP definition.
+
+If you want to be doubly sure, you can use https://jsonlint.com to validate the JSON contents.
+
+ **2. On Telegraf:**
+Add the below lines to your input plugins:
+
+    # Synology Docker
+    [[inputs.docker]]
+      endpoint = "tcp://synology.lan:2375"
+      container_names = []
+
+ **3. Grafana Dashboard:**
+
+Grafana Dashboard JSON is included in this repository. Simply import it, define your data source and you should be good to go.
