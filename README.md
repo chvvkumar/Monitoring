@@ -119,8 +119,9 @@ Add the endpoint details to /var/packages/Docker/etc/dockerd.json like so:
     	"registry-mirrors" : []
     }
 
-tcp://synology.lan:2375 <- This is the end point definition we added
-Note: Don't change any part of the "unix:///var/run/docker.sock" definition. Synology uses to run the Docker GUI. Also, since this is a JSON file, all lines except the last line have a " , " at the end. Also note the " , " after the TCP definition.
+In the above snippet, `tcp://synology.lan:2375` Is the end point definition we have to add
+
+*Note:* Don't change any part of the "unix:///var/run/docker.sock" definition. Synology uses to run the Docker GUI. Also, since this is a JSON file, all lines except the last line have a " , " at the end. Also note the " , " after the TCP definition.
 
 If you want to be doubly sure, you can use https://jsonlint.com to validate the JSON contents.
 
