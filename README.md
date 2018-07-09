@@ -1,5 +1,5 @@
 **
-# Monitoring VMWare ESXi, Synology, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
+# Monitor ESXi, Synology, Docker, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
 
 ## Screenshots:
 
