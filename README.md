@@ -83,8 +83,7 @@ then
 
 
     
-    /home/$USER/.snmp/mibs or user/share/snmp/mibs
-
+`/home/$USER/.snmp/mibs or user/share/snmp/mibs`
 
     
 4.  Go through the linked page above or the snmpwalk output and make a list of OIDs you want to monitor (grep is your friend here)
