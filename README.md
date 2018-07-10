@@ -4,7 +4,7 @@
 ## Screenshots:
 
 Synology Dashboard
-![Synology Dashboard](https://i.imgur.com/Vv2d7H4.png)
+![Synology Dashboard](https://i.imgur.com/Vv2d7H4.png?1)
 
 PiHole Dashboard
 ![PiHole Dashboard](https://i.imgur.com/jFb9qKl.png)
