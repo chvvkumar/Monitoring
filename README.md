@@ -1,22 +1,29 @@
 
-# Monitor ESXi, Synology, Docker, PiHole and Raspberry Pi using Grafana, InfluxDB and Telegraf
+
+# Monitor ESXi, Synology, Docker, PiHole and Raspberry Pi and Windows using Grafana, InfluxDB and Telegraf
 
 ## Screenshots:
 
 Synology Dashboard
-![Synology Dashboard](https://i.imgur.com/Vv2d7H4.png?1)
+![Synology Dashboard](https://i.imgur.com/8U5VwNX.png?1)
 
 PiHole Dashboard
-![PiHole Dashboard](https://i.imgur.com/jFb9qKl.png)
+![PiHole Dashboard](https://i.imgur.com/h4QrfxD.png)
 
 ESXi Dashboard
 ![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
+
+Windows
+![enter image description here](https://i.imgur.com/WA7156r.png)
 
 Raspberry Pi Dashboard
 ![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
 
 Docker Dashboard
-![Docker Dashboard](https://i.imgur.com/kgSWrBC.png)
+![Docker Dashboard](https://i.imgur.com/cBbMiJY.jpg)
+
+Asuswrt-Merlin Router (ASUS RT-AC68):
+![ASUS RT-AC68](https://i.imgur.com/KTKM1yv.png)
 
 ## **Monitoring Raspberry Pi stats:**
 
