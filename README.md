@@ -2,7 +2,7 @@
 
 # Monitor ESXi, Synology, Docker, PiHole and Raspberry Pi and Windows using Grafana, InfluxDB and Telegraf
 
-## My dashboards
+## Demo
 
 https://grafana.challa.co
 
