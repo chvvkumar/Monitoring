@@ -105,7 +105,18 @@ then
 
 ## **VMWare Monitoring**
 
-https://github.com/Oxalide/vsphere-influxdb-go
+Telegraf introduced a new vsphere plugin. I will be using this instead of a custom script going forward. This plugin and details can be found here:
+
+https://github.com/influxdata/telegraf/tree/master/plugins/inputs/vsphere
+
+Dashboards for the metrics can be found here:
+
+https://github.com/jorgedlcruz/vmware-grafana
+
+Old way:
+~~https://github.com/Oxalide/vsphere-influxdb-go~~
+For history's sake, I am leaving the old telegraf.conf file in this repo. You can find it here:
+https://github.com/chvvkumar/Monitoring/blob/master/old_telegraf.conf
 
 ## Monitoring Docker:
 
