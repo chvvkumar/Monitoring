@@ -1,0 +1,3925 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": 9684,
+  "graphTooltip": 0,
+  "id": 69,
+  "iteration": 1548224659264,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "rgba(212, 74, 58, 0.58)",
+        "#3f2b5b",
+        "#299C46"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 40,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "hideTimeOverride": true,
+      "id": 53,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "distinct",
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "30s",
+      "title": "Online users",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgb(255, 71, 71)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "hideTimeOverride": true,
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "#58140c",
+        "full": true,
+        "lineColor": "#58140c",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "transcode_streams"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "current_stream_stats"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "33s",
+      "title": "Transcoding Streams",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#299c46",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "hideTimeOverride": true,
+      "id": 75,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "#58140c",
+        "full": false,
+        "lineColor": "#58140c",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "stream_count"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "current_stream_stats"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "33s",
+      "title": "Total Streams",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#00a65b",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 0,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 67,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "total",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "library_stats"
+            },
+            {
+              "condition": "AND",
+              "key": "section_type",
+              "operator": "=",
+              "value": "artist"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "Music Artists",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#e5a00d ",
+        "#d44a3a"
+      ],
+      "datasource": "Varken",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 2,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 49,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count",
+      "targets": [
+        {
+          "groupBy": [],
+          "hide": false,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"total\" FROM \"Tautulli\" WHERE (\"section_name\" = 'Filmer') AND $timeFilter",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "section_name",
+              "operator": "=",
+              "value": "Movies"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "Movies",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#e5a00d ",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 4,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 65,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Radarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "Missing_Available",
+              "operator": "=",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "Missing Movies",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#e5a00d",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 6,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count",
+      "targets": [
+        {
+          "groupBy": [],
+          "hide": false,
+          "measurement": "Radarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"total\" FROM \"Tautulli\" WHERE (\"section_name\" = 'Filmer') AND $timeFilter",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Queue"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "330s",
+      "title": "Movies in queue",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#e5a00d ",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 8,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 61,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count",
+      "targets": [
+        {
+          "groupBy": [],
+          "hide": false,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT \"total\" FROM \"Tautulli\" WHERE (\"section_name\" = 'Filmer') AND $timeFilter",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "library_stats"
+            },
+            {
+              "condition": "AND",
+              "key": "section_name",
+              "operator": "=~",
+              "value": "/^$movielibrary$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "Recently Added Movies",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "delta"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 11,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 26,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Sonarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Queue"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "330s",
+      "title": "TV Shows in queue",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#0a50a1",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "decimals": 2,
+      "format": "Kbits",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 14,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 79,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "#1f78c1",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total_bandwidth"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "current_stream_stats"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "5m",
+      "title": "Tautulli Total Bandwidth",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "decimals": 2,
+      "format": "Kbits",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 19,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 80,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "lan_bandwidth"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "current_stream_stats"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "5m",
+      "title": "Tautulli LAN Bandwidth",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 2,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 51,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "total"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "library_stats"
+            },
+            {
+              "condition": "AND",
+              "key": "section_type",
+              "operator": "=",
+              "value": "show"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "TV Shows",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 4,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 63,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "seasons"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "library_stats"
+            },
+            {
+              "condition": "AND",
+              "key": "section_name",
+              "operator": "=",
+              "value": "TV Shows"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "TV Seasons",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 6,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 73,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "episodes"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "TV Episodes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 8,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 59,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "episodes"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "library_stats"
+            },
+            {
+              "condition": "AND",
+              "key": "section_name",
+              "operator": "=~",
+              "value": "/^$tvlibrary$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1d",
+      "title": "Recently Added Episodes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "delta"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(0, 204, 255, 0.6)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 11,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 71,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "count",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "1m"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "Sonarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Missing"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "title": "Missing Episodes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "total"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "decimals": 2,
+      "format": "Kbits",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 19,
+        "y": 4
+      },
+      "hideTimeOverride": true,
+      "id": 24,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "wan_bandwidth"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "current_stream_stats"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "5m",
+      "title": "Tautulli WAN Bandwidth",
+      "transparent": false,
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Varken",
+      "decimals": 0,
+      "fill": 2,
+      "gridPos": {
+        "h": 14,
+        "w": 4,
+        "x": 0,
+        "y": 6
+      },
+      "hideTimeOverride": true,
+      "id": 39,
+      "legend": {
+        "alignAsTable": false,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": false,
+        "sort": "total",
+        "sortDesc": false,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 10,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [
+        {
+          "alias": "Transcode",
+          "color": "rgb(255, 71, 71)"
+        },
+        {
+          "alias": "Direct Play",
+          "color": "rgb(249, 170, 3)"
+        },
+        {
+          "alias": "Direct Stream",
+          "color": "white"
+        },
+        {
+          "alias": "Music",
+          "color": "#70dbed"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_device_type",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "device_type"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT count(distinct(\"hash\")) FROM \"Tautulli\" WHERE $timeFilter GROUP BY time(1d), \"device_type\"",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": true,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              },
+              {
+                "params": [
+                  "count"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Transcode"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": true,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Direct Stream"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": true,
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Music"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "now-7d",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Top Device Type Last 7 days",
+      "tooltip": {
+        "shared": false,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "series",
+        "name": null,
+        "show": true,
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "none",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "decimals": null,
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": "0"
+      },
+      "datasource": "$datasource",
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 3,
+        "x": 4,
+        "y": 6
+      },
+      "hideTimeOverride": true,
+      "id": 84,
+      "interval": null,
+      "legend": {
+        "percentage": true,
+        "percentageDecimals": null,
+        "show": true,
+        "sideWidth": null,
+        "sort": "current",
+        "sortDesc": true,
+        "values": false
+      },
+      "legendType": "On graph",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "pieType": "donut",
+      "strokeWidth": "",
+      "targets": [
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "1w",
+      "title": "Stream Types",
+      "transparent": false,
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "$datasource",
+      "decimals": 0,
+      "fill": 9,
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 7,
+        "y": 6
+      },
+      "hideTimeOverride": true,
+      "id": 36,
+      "legend": {
+        "alignAsTable": false,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": false,
+        "sort": "total",
+        "sortDesc": false,
+        "total": true,
+        "values": true
+      },
+      "lines": false,
+      "linewidth": 3,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 1,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "Transcode",
+          "color": "rgb(255, 71, 71)"
+        },
+        {
+          "alias": "Direct Play",
+          "color": "rgb(249, 170, 3)"
+        },
+        {
+          "alias": "Direct Stream",
+          "color": "white"
+        },
+        {
+          "alias": "Music",
+          "color": "#70dbed"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Direct Play"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Transcode"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Direct Stream"
+            }
+          ]
+        },
+        {
+          "alias": "$tag_video_decision",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "video_decision"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "video_decision",
+              "operator": "=",
+              "value": "Music"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "now-7d",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Stream type Breakdown Last 7 days",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": "Video Decision",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "circleMaxSize": "3",
+      "circleMinSize": "1",
+      "colors": [
+        "rgb(63, 255, 0)",
+        "rgb(255, 103, 0)",
+        "rgb(255, 36, 0)"
+      ],
+      "datasource": "$datasource",
+      "decimals": 0,
+      "esGeoPoint": "geohash",
+      "esLocationName": "location",
+      "esMetric": "metric",
+      "gridPos": {
+        "h": 14,
+        "w": 6,
+        "x": 18,
+        "y": 6
+      },
+      "hideEmpty": false,
+      "hideTimeOverride": false,
+      "hideZero": false,
+      "id": 34,
+      "initialZoom": "4",
+      "interval": "",
+      "links": [],
+      "locationData": "table",
+      "mapCenter": "North America",
+      "mapCenterLatitude": 40,
+      "mapCenterLongitude": -100,
+      "maxDataPoints": 1,
+      "minSpan": 8,
+      "mouseWheelZoom": true,
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "full_location",
+        "latitudeField": "latitude",
+        "longitudeField": "longitude",
+        "metricField": "metric",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "alias": "$tag_region_code",
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "latitude"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "longitude"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "full_location"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              },
+              {
+                "params": [
+                  "metric"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            }
+          ]
+        }
+      ],
+      "thresholds": "2,3",
+      "timeFrom": "30d",
+      "timeShift": null,
+      "title": "",
+      "transparent": false,
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "Streams",
+      "unitSingle": "",
+      "unitSingular": "Stream",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": ".04"
+      },
+      "datasource": "$datasource",
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 3,
+        "x": 4,
+        "y": 13
+      },
+      "hideTimeOverride": true,
+      "id": 82,
+      "interval": null,
+      "legend": {
+        "header": "",
+        "percentage": true,
+        "percentageDecimals": null,
+        "show": true,
+        "sideWidth": null,
+        "sort": "total",
+        "sortDesc": true,
+        "values": false
+      },
+      "legendType": "On graph",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "pieType": "donut",
+      "strokeWidth": "",
+      "targets": [
+        {
+          "alias": "$tag_device_type",
+          "groupBy": [
+            {
+              "params": [
+                "device_type"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "now/M",
+      "title": "Top Device Types This Month",
+      "type": "grafana-piechart-panel",
+      "valueName": "total"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "$datasource",
+      "decimals": 0,
+      "fill": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 7,
+        "y": 13
+      },
+      "hideTimeOverride": true,
+      "id": 38,
+      "legend": {
+        "alignAsTable": false,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": false,
+        "sort": "total",
+        "sortDesc": false,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 3,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "Music",
+          "color": "rgb(255, 71, 71)"
+        },
+        {
+          "alias": "TV",
+          "color": "rgb(249, 170, 3)"
+        },
+        {
+          "alias": "Movies",
+          "color": "white"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Movies",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "media_type",
+              "operator": "=",
+              "value": "Movie"
+            }
+          ]
+        },
+        {
+          "alias": "TV",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "media_type",
+              "operator": "=",
+              "value": "Episode"
+            }
+          ]
+        },
+        {
+          "alias": "Music",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "Tautulli",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              },
+              {
+                "params": [],
+                "type": "count"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Session"
+            },
+            {
+              "condition": "AND",
+              "key": "media_type",
+              "operator": "=",
+              "value": "Track"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "now-30d",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Daily Play Count Last 30 Days",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": "Movies",
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": true,
+        "alignLevel": 1
+      }
+    },
+    {
+      "columns": [],
+      "datasource": "$datasource",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 0,
+        "y": 20
+      },
+      "hideTimeOverride": true,
+      "id": 86,
+      "links": [],
+      "minSpan": 6,
+      "pageSize": 9,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": null,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "pattern": "Time",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Name",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "pattern": "name",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "distinct",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "mappingType": 1,
+          "pattern": "titleSlug",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "titleSlug"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Radarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "Missing_Available",
+              "operator": "=",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "302s",
+      "title": "Missing Available Movies",
+      "transform": "table",
+      "transparent": false,
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "$datasource",
+      "fontSize": "90%",
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 4,
+        "y": 20
+      },
+      "hideTimeOverride": true,
+      "id": 92,
+      "interval": "32s",
+      "links": [],
+      "minSpan": 6,
+      "pageSize": 3,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 3,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "pattern": "Time",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Name",
+          "colorMode": "row",
+          "colors": [
+            "#0a437c",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "name",
+          "preserveFormat": true,
+          "thresholds": [
+            "20"
+          ],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "T",
+          "colorMode": "row",
+          "colors": [
+            "#0a437c",
+            "rgb(168, 147, 4)",
+            "#629e51"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "protocol_id",
+          "thresholds": [
+            "-1",
+            "1"
+          ],
+          "type": "string",
+          "unit": "none",
+          "valueMaps": [
+            {
+              "text": "Tor",
+              "value": "0"
+            },
+            {
+              "text": "Use",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "distinct",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Quality",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "quality",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "quality"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "protocol_id"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Radarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Queue"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "302s",
+      "title": "Movies in Download Queue",
+      "transform": "table",
+      "transparent": false,
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "$datasource",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 9,
+        "y": 20
+      },
+      "hideTimeOverride": true,
+      "id": 94,
+      "interval": "32s",
+      "links": [],
+      "minSpan": 8,
+      "pageSize": 7,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 3,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "link": false,
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "TV Show",
+          "colorMode": "cell",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkUrl": "",
+          "pattern": "name",
+          "preserveFormat": true,
+          "thresholds": [
+            "20"
+          ],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "DL",
+          "colorMode": "row",
+          "colors": [
+            "#c15c17",
+            "rgba(237, 129, 40, 0.89)",
+            "#24c3ff"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "downloaded",
+          "thresholds": [
+            ".1",
+            "1"
+          ],
+          "type": "string",
+          "unit": "none",
+          "valueMaps": [
+            {
+              "text": "No",
+              "value": "0"
+            },
+            {
+              "text": "Yes",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "distinct",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "S/E",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "sxe",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Air time",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "airsUTC",
+          "thresholds": [],
+          "type": "date",
+          "unit": "dateTimeAsIso"
+        }
+      ],
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "downloaded"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "sxe"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "airsUTC"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Sonarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Future"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "302s",
+      "title": "TV Shows on Today",
+      "transform": "table",
+      "transparent": false,
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "$datasource",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 14,
+        "y": 20
+      },
+      "hideTimeOverride": true,
+      "id": 90,
+      "interval": "30s",
+      "links": [],
+      "minSpan": 8,
+      "pageSize": 7,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": null,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "Name",
+          "colorMode": "cell",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkUrl": "",
+          "pattern": "name",
+          "preserveFormat": true,
+          "thresholds": [
+            "20"
+          ],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "T",
+          "colorMode": "row",
+          "colors": [
+            "#0a437c",
+            "rgb(168, 147, 4)",
+            "#629e51"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "protocol_id",
+          "thresholds": [
+            "-1",
+            "1"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Tor",
+              "value": "0"
+            },
+            {
+              "text": "Use",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "distinct",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "S/E",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "sxe",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "sxe"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "protocol_id"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Sonarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Queue"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "30s",
+      "timeShift": null,
+      "title": "TV Shows in Download Queue",
+      "transform": "table",
+      "transparent": false,
+      "type": "table"
+    },
+    {
+      "columns": [],
+      "datasource": "$datasource",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 19,
+        "y": 20
+      },
+      "hideTimeOverride": true,
+      "id": 88,
+      "links": [],
+      "minSpan": 8,
+      "pageSize": 7,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": null,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "Name",
+          "colorMode": "row",
+          "colors": [
+            "#e24d42",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkUrl": "",
+          "pattern": "name",
+          "preserveFormat": true,
+          "thresholds": [
+            "20"
+          ],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Season/Episode",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "sxe",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "distinct",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "sxe"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "Sonarr",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "hash"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "type",
+              "operator": "=",
+              "value": "Missing"
+            }
+          ]
+        }
+      ],
+      "timeFrom": "302s",
+      "timeShift": null,
+      "title": "Missing TV Shows (Last 7 Days)",
+      "transform": "table",
+      "transparent": false,
+      "type": "table"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 16,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "Varken",
+          "value": "Varken"
+        },
+        "hide": 0,
+        "label": "Varken datasource",
+        "name": "datasource",
+        "options": [],
+        "query": "influxdb",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "Concerts",
+          "value": "Concerts"
+        },
+        "datasource": "$datasource",
+        "definition": "SHOW TAG VALUES ON varken WITH KEY = \"section_name\"",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Movie Library",
+        "multi": false,
+        "name": "movielibrary",
+        "options": [],
+        "query": "SHOW TAG VALUES ON varken WITH KEY = \"section_name\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "Concerts",
+          "value": "Concerts"
+        },
+        "datasource": "$datasource",
+        "definition": "SHOW TAG VALUES ON varken WITH KEY = \"section_name\"",
+        "hide": 0,
+        "includeAll": false,
+        "label": "TV Library",
+        "multi": false,
+        "name": "tvlibrary",
+        "options": [],
+        "query": "SHOW TAG VALUES ON varken WITH KEY = \"section_name\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Plex Dashboard",
+  "uid": "bj0JnBMmz",
+  "version": 17
+}
