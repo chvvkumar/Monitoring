@@ -1,6 +1,6 @@
 
 
-# Monitor ESXi, Synology, Docker, PiHole and Raspberry Pi and Windows using Grafana, InfluxDB and Telegraf
+# Monitor ESXi, Synology, Docker, PiHole, Plex and Raspberry Pi and Windows using Grafana, InfluxDB and Telegraf
 
 ## Demo
 
@@ -10,6 +10,9 @@ https://grafana.challa.co
 
 Synology Dashboard
 ![Synology Dashboard](https://i.imgur.com/8U5VwNX.png?1)
+
+Plex:
+![Plex](https://i.imgur.com/q4GuRvw.png)
 
 PiHole Dashboard
 ![PiHole Dashboard](https://i.imgur.com/h4QrfxD.png)
@@ -159,3 +162,9 @@ Add the below lines to your input plugins:
  **3. Grafana Dashboard:**
 
 Grafana Dashboard JSON is included in this repository. Simply import it, define your data source and you should be good to go.
+
+## **Plex Monitoring**
+
+Plex can be monitored using Verken linked below. I have included my customized dashboard in the repo for reference.
+
+https://github.com/Boerderij/Varken
