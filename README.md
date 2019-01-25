@@ -12,7 +12,7 @@ Synology Dashboard
 ![Synology Dashboard](https://i.imgur.com/8U5VwNX.png?1)
 
 Plex:
-![Plex](https://i.imgur.com/q4GuRvw.png)
+![Plex](https://i.imgur.com/YgFJ0C8.png)
 
 PiHole Dashboard
 ![PiHole Dashboard](https://i.imgur.com/h4QrfxD.png)
