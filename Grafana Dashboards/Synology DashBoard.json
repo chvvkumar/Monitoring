@@ -1,46 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_INFLUXDB",
-      "label": "influxdb",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.1.4"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -58,8 +16,8 @@
   "editable": true,
   "gnetId": 1727,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1532004116541,
+  "id": 2,
+  "iteration": 1560721183105,
   "links": [],
   "panels": [
     {
@@ -71,7 +29,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -103,6 +61,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -247,6 +206,16 @@
           "op": "=",
           "text": "Crashed",
           "value": "12"
+        },
+        {
+          "op": "=",
+          "text": "Scrubbing",
+          "value": "13"
+        },
+        {
+          "op": "=",
+          "text": "Deploying volume",
+          "value": "14"
         }
       ],
       "valueName": "current"
@@ -260,7 +229,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -292,6 +261,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -381,7 +351,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -413,6 +382,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -473,7 +443,7 @@
       "thresholds": "",
       "title": "UPS Status",
       "type": "singlestat",
-      "valueFontSize": "100%",
+      "valueFontSize": "50%",
       "valueMaps": [
         {
           "op": "=",
@@ -502,7 +472,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "decimals": 1,
       "format": "dtdurations",
       "gauge": {
@@ -514,7 +484,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 6,
+        "w": 5,
         "x": 6,
         "y": 0
       },
@@ -535,6 +505,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -619,16 +590,17 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_INFLUXDB}",
-      "fontSize": "120%",
+      "datasource": "influxdb",
+      "fontSize": "100%",
       "gridPos": {
         "h": 3,
-        "w": 8,
-        "x": 12,
+        "w": 9,
+        "x": 11,
         "y": 0
       },
       "id": 6,
       "links": [],
+      "options": {},
       "pageSize": null,
       "scroll": false,
       "showHeader": true,
@@ -696,25 +668,7 @@
               },
               {
                 "params": [
-                  "NAS Model"
-                ],
-                "type": "alias"
-              }
-            ],
-            [
-              {
-                "params": [
-                  "serialNumber"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  "Serial Number"
+                  "Synology Model"
                 ],
                 "type": "alias"
               }
@@ -768,7 +722,6 @@
       ],
       "title": "Synology DS416Play NAS",
       "transform": "table",
-      "transparent": false,
       "type": "table"
     },
     {
@@ -780,7 +733,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -812,6 +765,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -907,7 +861,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -939,6 +893,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1023,7 +978,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "decimals": 2,
       "format": "decbytes",
       "gauge": {
@@ -1056,6 +1010,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": " / 11.5TB",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1121,7 +1076,7 @@
         }
       ],
       "thresholds": "7000000000000,9000000000000",
-      "title": "Used Space",
+      "title": "Used Capacity",
       "type": "singlestat",
       "valueFontSize": "30%",
       "valueMaps": [
@@ -1142,7 +1097,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -1174,7 +1129,8 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": "",
+      "options": {},
+      "postfix": "°C",
       "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
@@ -1270,7 +1226,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -1302,6 +1257,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1381,8 +1337,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_INFLUXDB}",
-      "decimals": 2,
+      "decimals": null,
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -1414,6 +1369,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1474,7 +1430,7 @@
       "thresholds": "50,75",
       "title": "UPS Load",
       "type": "singlestat",
-      "valueFontSize": "50%",
+      "valueFontSize": "80%",
       "valueMaps": [
         {
           "op": "=",
@@ -1493,7 +1449,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "format": "percent",
       "gauge": {
         "maxValue": 100,
@@ -1525,6 +1480,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1604,11 +1560,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "decimals": 0,
       "format": "dtdurations",
       "gauge": {
-        "maxValue": 2244,
+        "maxValue": 1860,
         "minValue": 0,
         "show": true,
         "thresholdLabels": false,
@@ -1637,6 +1592,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1716,7 +1672,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "decimals": 2,
       "format": "volt",
       "gauge": {
@@ -1749,6 +1704,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1828,7 +1784,6 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "${DS_INFLUXDB}",
       "decimals": 2,
       "format": "volt",
       "gauge": {
@@ -1861,6 +1816,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -1936,11 +1892,11 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
-        "w": 8,
+        "w": 10,
         "x": 0,
         "y": 8
       },
@@ -1960,6 +1916,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "connected",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2104,8 +2061,9 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
-      "title": "Load",
+      "title": "Load Vs. Temperature",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -2144,16 +2102,17 @@
     },
     {
       "columns": [],
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "fontSize": "100%",
       "gridPos": {
         "h": 5,
-        "w": 7,
-        "x": 8,
+        "w": 8,
+        "x": 10,
         "y": 8
       },
       "id": 8,
       "links": [],
+      "options": {},
       "pageSize": null,
       "scroll": false,
       "showHeader": true,
@@ -2375,12 +2334,11 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
       "fill": 1,
       "gridPos": {
         "h": 5,
-        "w": 9,
-        "x": 15,
+        "w": 6,
+        "x": 18,
         "y": 8
       },
       "id": 20,
@@ -2399,6 +2357,7 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2503,6 +2462,7 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "Used Capacity",
       "tooltip": {
@@ -2546,7 +2506,6 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
       "fill": 1,
       "gridPos": {
         "h": 10,
@@ -2570,6 +2529,7 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2581,6 +2541,10 @@
         },
         {
           "alias": "UPS Battery Voltage",
+          "yaxis": 2
+        },
+        {
+          "alias": "UPS Runtime",
           "yaxis": 2
         }
       ],
@@ -2656,7 +2620,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -2739,6 +2703,7 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "UPS",
       "tooltip": {
@@ -2783,10 +2748,9 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
       "fill": 0,
       "gridPos": {
-        "h": 6,
+        "h": 8,
         "w": 24,
         "x": 0,
         "y": 23
@@ -2805,6 +2769,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -3086,6 +3051,7 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "Disk and System Temperatures",
       "tooltip": {
@@ -3093,7 +3059,6 @@
         "sort": 0,
         "value_type": "individual"
       },
-      "transparent": false,
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -3131,13 +3096,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "fill": 1,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 29
+        "y": 31
       },
       "id": 24,
       "legend": {
@@ -3155,6 +3120,7 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -3339,6 +3305,7 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "LAN Traffic",
       "tooltip": {
@@ -3383,13 +3350,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_INFLUXDB}",
+      "datasource": "influxdb",
       "fill": 1,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 29
+        "y": 31
       },
       "id": 1,
       "legend": {
@@ -3407,6 +3374,7 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -3591,6 +3559,7 @@
       ],
       "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "ESXi Traffic",
       "tooltip": {
@@ -3631,8 +3600,8 @@
       }
     }
   ],
-  "refresh": "5s",
-  "schemaVersion": 16,
+  "refresh": "1m",
+  "schemaVersion": 18,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -3643,18 +3612,25 @@
           "value": "influxdb"
         },
         "hide": 0,
+        "includeAll": false,
         "label": null,
+        "multi": false,
         "name": "influxdb",
         "options": [],
         "query": "influxdb",
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "type": "datasource"
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_INFLUXDB}",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "influxdb",
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "Syno:",
@@ -3664,6 +3640,7 @@
         "query": "SHOW TAG VALUES FROM \"snmp.SYNO\" WITH KEY = \"agent_host\"",
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
@@ -3673,8 +3650,14 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_INFLUXDB}",
+        "current": {
+          "text": "eth1",
+          "value": [
+            "eth1"
+          ]
+        },
+        "datasource": "influxdb",
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "Interface:",
@@ -3684,6 +3667,7 @@
         "query": "SHOW TAG VALUES FROM \"ifTable\" WITH KEY = \"ifDescr\" WHERE \"agent_host\" =~ /^$host/",
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
         "tags": [],
@@ -3694,7 +3678,7 @@
     ]
   },
   "time": {
-    "from": "now-24h",
+    "from": "now-30d",
     "to": "now"
   },
   "timepicker": {
@@ -3725,5 +3709,5 @@
   "timezone": "browser",
   "title": "Synology DashBoard",
   "uid": "TIcL1_ezk",
-  "version": 47
+  "version": 69
 }
