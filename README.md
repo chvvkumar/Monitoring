@@ -9,7 +9,7 @@ https://grafana.challa.co
 ## Screenshots:
 
 Synology Dashboard
-![Synology Dashboard](https://i.imgur.com/8U5VwNX.png?1)
+![Synology Dashboard](https://i.imgur.com/MHz1V5P.png)
 
 Plex:
 ![Plex](https://i.imgur.com/YgFJ0C8.png)
