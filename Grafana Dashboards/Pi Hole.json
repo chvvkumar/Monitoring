@@ -250,7 +250,7 @@
         }
       ],
       "thresholds": "100000,350000",
-      "title": "DNS Quieries",
+      "title": "DNS Queries",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -361,7 +361,7 @@
         }
       ],
       "thresholds": "500000",
-      "title": "Cached DNS Quieries",
+      "title": "Cached DNS Queries",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -583,7 +583,7 @@
         }
       ],
       "thresholds": "5000,10000",
-      "title": "Number of Blocked Quieries",
+      "title": "Number of Blocked Queries",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1295,14 +1295,14 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "DNS Quieries Today",
+          "alias": "DNS Queries Today",
           "yaxis": 2
         },
         {
           "alias": "Blocked Today"
         },
         {
-          "alias": "Blocked Quieries",
+          "alias": "Blocked Queries",
           "yaxis": 2
         }
       ],
@@ -1311,7 +1311,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "Blocked Quieries",
+          "alias": "Blocked Queries",
           "groupBy": [
             {
               "params": [
@@ -1354,7 +1354,7 @@
           "tags": []
         },
         {
-          "alias": "DNS Quieries",
+          "alias": "DNS Queries",
           "groupBy": [
             {
               "params": [
@@ -1395,7 +1395,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "DNS Quieries",
+      "title": "DNS Queries",
       "tooltip": {
         "shared": true,
         "sort": 0,
