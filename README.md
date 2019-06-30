@@ -15,7 +15,7 @@ Plex:
 ![Plex](https://i.imgur.com/YgFJ0C8.png)
 
 PiHole Dashboard
-![PiHole Dashboard](https://i.imgur.com/h4QrfxD.png)
+![PiHole Dashboard](https://i.imgur.com/YQEgRXA.png)
 
 ESXi Dashboard
 ![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
