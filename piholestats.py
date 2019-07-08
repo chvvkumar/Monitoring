@@ -10,4 +10,4 @@ rstats = json.loads(r.text)
 #for x in rstats:
 #    stats[x] = float(rstats[x].replace(',', ''))
 
-print json.dumps(rstats)
+print(json.dumps(rstats))
