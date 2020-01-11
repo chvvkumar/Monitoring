@@ -17,7 +17,7 @@
   "gnetId": 4220,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1561932915200,
+  "iteration": 1578707183860,
   "links": [
     {
       "icon": "external link",
@@ -1266,12 +1266,14 @@
       "dashes": false,
       "datasource": "influxdb",
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
         "y": 5
       },
+      "hiddenSeries": false,
       "id": 33,
       "legend": {
         "alignAsTable": true,
@@ -1288,7 +1290,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1439,12 +1443,14 @@
       "dashes": false,
       "datasource": "influxdb",
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
         "y": 12
       },
+      "hiddenSeries": false,
       "id": 31,
       "legend": {
         "alignAsTable": false,
@@ -1461,7 +1467,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1680,6 +1688,7 @@
       "editable": true,
       "error": false,
       "fill": 4,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 9,
@@ -1687,6 +1696,7 @@
         "x": 0,
         "y": 19
       },
+      "hiddenSeries": false,
       "id": 4,
       "legend": {
         "alignAsTable": true,
@@ -1702,7 +1712,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2064,6 +2076,7 @@
       "editable": true,
       "error": false,
       "fill": 6,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 9,
@@ -2071,6 +2084,7 @@
         "x": 8,
         "y": 19
       },
+      "hiddenSeries": false,
       "id": 5,
       "legend": {
         "alignAsTable": true,
@@ -2088,7 +2102,9 @@
       "linewidth": 0,
       "links": [],
       "nullPointMode": "connected",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2326,6 +2342,7 @@
       "editable": true,
       "error": false,
       "fill": 1,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 9,
@@ -2333,6 +2350,7 @@
         "x": 16,
         "y": 19
       },
+      "hiddenSeries": false,
       "id": 6,
       "legend": {
         "alignAsTable": true,
@@ -2348,7 +2366,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2543,12 +2563,14 @@
       "dashes": false,
       "datasource": "influxdb",
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 8,
         "x": 0,
         "y": 28
       },
+      "hiddenSeries": false,
       "id": 16,
       "legend": {
         "alignAsTable": true,
@@ -2564,7 +2586,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2727,6 +2751,7 @@
       "editable": true,
       "error": false,
       "fill": 1,
+      "fillGradient": 0,
       "grid": {},
       "gridPos": {
         "h": 7,
@@ -2734,6 +2759,7 @@
         "x": 8,
         "y": 28
       },
+      "hiddenSeries": false,
       "id": 8,
       "legend": {
         "alignAsTable": true,
@@ -2749,7 +2775,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -2858,12 +2886,14 @@
       "dashes": false,
       "datasource": "influxdb",
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 8,
         "x": 16,
         "y": 28
       },
+      "hiddenSeries": false,
       "id": 17,
       "legend": {
         "alignAsTable": true,
@@ -2879,7 +2909,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -3826,7 +3858,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 18,
+  "schemaVersion": 21,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -3884,6 +3916,7 @@
       {
         "allValue": null,
         "current": {
+          "selected": false,
           "text": "All",
           "value": "$__all"
         },
@@ -3911,6 +3944,7 @@
         "auto_count": 30,
         "auto_min": "10s",
         "current": {
+          "selected": false,
           "text": "auto",
           "value": "$__auto_interval_Interval"
         },
@@ -4016,7 +4050,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Pi Hole",
+  "title": "Pi Hole_typo",
   "uid": "B-xeNrekk",
-  "version": 21
+  "version": 24
 }
