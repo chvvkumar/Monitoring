@@ -27,7 +27,7 @@ Raspberry Pi Dashboard
 ![Raspberry Pi Dashboard](./Screenshots/rpi.png)
 
 Docker Dashboard
-![Docker Dashboard](./Screenshots/docker.png)
+![Docker Dashboard](./Screenshots/docker.jpg)
 
 Asuswrt-Merlin Router (ASUS RT-AC68):
 ![ASUS RT-AC68](./Screenshots/router_merlin.png)
