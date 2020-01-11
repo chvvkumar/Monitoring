@@ -12,11 +12,11 @@
       }
     ]
   },
-  "editable": true,
+  "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
   "id": 93,
-  "iteration": 1578714624157,
+  "iteration": 1578718389742,
   "links": [],
   "panels": [
     {
@@ -28,7 +28,16 @@
         "y": 0
       },
       "id": 2,
-      "title": "Row title",
+      "panels": [],
+      "repeat": "PiHole",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
+      "title": "PiHole Host: $PiHole",
       "type": "row"
     },
     {
@@ -43,6 +52,7 @@
       "id": 8,
       "links": [],
       "options": {
+        "displayMode": "basic",
         "fieldOptions": {
           "calcs": [
             "last"
@@ -58,21 +68,25 @@
                 "value": "null"
               }
             ],
-            "max": 250000,
+            "max": 100000,
             "min": 0,
             "nullValueMode": "connected",
             "thresholds": [
               {
-                "color": "green",
+                "color": "dark-green",
                 "value": null
               },
               {
-                "color": "#EAB839",
-                "value": 100000
+                "color": "yellow",
+                "value": 50000
+              },
+              {
+                "color": "orange",
+                "value": 75000
               },
               {
                 "color": "red",
-                "value": 150000
+                "value": 100000
               }
             ],
             "unit": "short"
@@ -80,14 +94,19 @@
           "override": {},
           "values": false
         },
-        "orientation": "horizontal",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "orientation": "vertical"
       },
       "pluginVersion": "6.5.2",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "targets": [
         {
-          "alias": "",
+          "alias": "Total Queries",
           "groupBy": [
             {
               "params": [
@@ -128,18 +147,61 @@
               "value": "/^$PiHole$/"
             }
           ]
+        },
+        {
+          "alias": "Blocked Queries",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "httpjson_pihole1_stats",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "ads_blocked_today"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            }
+          ]
         }
       ],
       "timeFrom": null,
       "timeShift": null,
       "title": "$PiHole - Queries Today",
       "transparent": true,
-      "type": "gauge"
+      "type": "bargauge"
     },
     {
       "aliasColors": {
-        "Cached": "#37872D",
-        "Forwarded": "#1F60C4"
+        "Cached": "#049fff",
+        "Forwarded": "#ff5c04"
       },
       "breakPoint": "50%",
       "cacheTimeout": null,
@@ -171,7 +233,14 @@
       "options": {},
       "pieType": "pie",
       "pluginVersion": "6.5.2",
-      "strokeWidth": "5",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
+      "strokeWidth": "2",
       "targets": [
         {
           "aggregation": "Last",
@@ -283,10 +352,10 @@
     },
     {
       "aliasColors": {
-        "CNAME": "#37872D",
-        "IP": "#73BF69",
-        "NODATA": "#F2495C",
-        "NXDOMAIN": "#FF9830"
+        "Blocked": "#ff5c04",
+        "Cached": "#37872D",
+        "Forwarded": "#1F60C4",
+        "Total": "#37872D"
       },
       "breakPoint": "50%",
       "cacheTimeout": null,
@@ -304,6 +373,160 @@
         "x": 9,
         "y": 1
       },
+      "id": 37,
+      "interval": null,
+      "legend": {
+        "percentage": true,
+        "show": true,
+        "values": true
+      },
+      "legendType": "Under graph",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "options": {},
+      "pieType": "pie",
+      "pluginVersion": "6.5.2",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
+      "strokeWidth": "2",
+      "targets": [
+        {
+          "aggregation": "Last",
+          "alias": "Blocked",
+          "decimals": 2,
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "httpjson_pihole1_stats",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "ads_blocked_today"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            }
+          ],
+          "units": "none",
+          "valueHandler": "Number Threshold"
+        },
+        {
+          "aggregation": "Last",
+          "alias": "Total",
+          "decimals": 2,
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "httpjson_pihole1_stats",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "dns_queries_today"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            }
+          ],
+          "units": "none",
+          "valueHandler": "Number Threshold"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$PiHole - Queries",
+      "transparent": true,
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "CNAME": "#2f00ff",
+        "IP": "#ffd500",
+        "NODATA": "#ff00d0",
+        "NXDOMAIN": "#FF9830"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": null,
+      "decimals": null,
+      "fontSize": "80%",
+      "format": "short",
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 14,
+        "y": 1
+      },
       "id": 36,
       "interval": null,
       "legend": {
@@ -317,6 +540,13 @@
       "nullPointMode": "connected",
       "options": {},
       "pieType": "pie",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "strokeWidth": "1",
       "targets": [
         {
@@ -468,56 +698,6 @@
           ],
           "units": "none",
           "valueHandler": "Number Threshold"
-        },
-        {
-          "aggregation": "Last",
-          "alias": "NXDOMAIN",
-          "decimals": 2,
-          "displayAliasType": "Warning / Critical",
-          "displayType": "Regular",
-          "displayValueWithAlias": "Never",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "httpjson_pihole1_stats",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "reply_NXDOMAIN"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$PiHole$/"
-            }
-          ],
-          "units": "none",
-          "valueHandler": "Number Threshold"
         }
       ],
       "timeFrom": null,
@@ -526,218 +706,6 @@
       "transparent": true,
       "type": "grafana-piechart-panel",
       "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "influxdb",
-      "gridPos": {
-        "h": 7,
-        "w": 4,
-        "x": 14,
-        "y": 1
-      },
-      "id": 29,
-      "links": [],
-      "options": {
-        "displayMode": "basic",
-        "fieldOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "defaults": {
-            "mappings": [
-              {
-                "id": 0,
-                "op": "=",
-                "text": "N/A",
-                "type": 1,
-                "value": "null"
-              }
-            ],
-            "max": 100,
-            "min": 0,
-            "nullValueMode": "connected",
-            "thresholds": [
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": null
-              },
-              {
-                "color": "dark-yellow",
-                "value": 50
-              },
-              {
-                "color": "red",
-                "value": 75
-              }
-            ],
-            "unit": "percent"
-          },
-          "override": {},
-          "values": false
-        },
-        "orientation": "vertical"
-      },
-      "pluginVersion": "6.5.2",
-      "targets": [
-        {
-          "alias": "CPU Usage",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "cpu",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT last(\"usage_idle\") *-1 + 100 FROM \"cpu\" WHERE (\"host\" =~ /^$PiHole$/ AND \"cpu\" = 'cpu-total') AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "C",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "usage_idle"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              },
-              {
-                "params": [
-                  "*-1 + 100"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$PiHole$/"
-            },
-            {
-              "condition": "AND",
-              "key": "cpu",
-              "operator": "=",
-              "value": "cpu-total"
-            }
-          ]
-        },
-        {
-          "alias": "RAM Usage",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mem",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT last(\"used_percent\") FROM \"mem\" WHERE (\"host\" =~ /^$PiHole$/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": false,
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "used_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$PiHole$/"
-            }
-          ]
-        },
-        {
-          "alias": "Disk Usage",
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "disk",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "used_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$PiHole$/"
-            },
-            {
-              "condition": "AND",
-              "key": "path",
-              "operator": "=",
-              "value": "/"
-            }
-          ]
-        }
-      ],
-      "title": "$PiHole- Resource Utilization",
-      "transparent": true,
-      "type": "bargauge"
     },
     {
       "cacheTimeout": null,
@@ -762,8 +730,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
-        "x": 18,
+        "w": 5,
+        "x": 19,
         "y": 1
       },
       "id": 19,
@@ -795,6 +763,13 @@
           "to": "null"
         }
       ],
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -867,8 +842,227 @@
       "datasource": "influxdb",
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 18,
+        "w": 3,
+        "x": 19,
+        "y": 3
+      },
+      "id": 29,
+      "links": [],
+      "options": {
+        "displayMode": "basic",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "defaults": {
+            "mappings": [
+              {
+                "id": 0,
+                "op": "=",
+                "text": "N/A",
+                "type": 1,
+                "value": "null"
+              }
+            ],
+            "max": 100,
+            "min": 0,
+            "nullValueMode": "connected",
+            "thresholds": [
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": null
+              },
+              {
+                "color": "dark-yellow",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 75
+              }
+            ],
+            "unit": "percent"
+          },
+          "override": {},
+          "values": false
+        },
+        "orientation": "vertical"
+      },
+      "pluginVersion": "6.5.2",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
+      "targets": [
+        {
+          "alias": "CPU",
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "cpu",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT last(\"usage_idle\") *-1 + 100 FROM \"cpu\" WHERE (\"host\" =~ /^$PiHole$/ AND \"cpu\" = 'cpu-total') AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": true,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "usage_idle"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "*-1 + 100"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            },
+            {
+              "condition": "AND",
+              "key": "cpu",
+              "operator": "=",
+              "value": "cpu-total"
+            }
+          ]
+        },
+        {
+          "alias": "RAM",
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "mem",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT last(\"used_percent\") FROM \"mem\" WHERE (\"host\" =~ /^$PiHole$/) AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": false,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "used_percent"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            }
+          ]
+        },
+        {
+          "alias": "Disk",
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "disk",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "used_percent"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$PiHole$/"
+            },
+            {
+              "condition": "AND",
+              "key": "path",
+              "operator": "=",
+              "value": "/"
+            }
+          ]
+        }
+      ],
+      "title": "$PiHole- Resource Utilization",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "influxdb",
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 22,
         "y": 3
       },
       "id": 26,
@@ -919,9 +1113,16 @@
         "orientation": "vertical"
       },
       "pluginVersion": "6.5.2",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "targets": [
         {
-          "alias": "CPU Temperature",
+          "alias": "CPU",
           "groupBy": [
             {
               "params": [
@@ -970,7 +1171,7 @@
           ]
         },
         {
-          "alias": "GPU Temperature",
+          "alias": "GPU",
           "groupBy": [
             {
               "params": [
@@ -1014,13 +1215,13 @@
           ]
         }
       ],
-      "title": "$PiHole - Temperatures",
+      "title": "$PiHole - Temps",
       "transparent": true,
       "type": "bargauge"
     },
     {
       "aliasColors": {
-        "Blocked Queries": "semi-dark-orange",
+        "Blocked Queries": "#ff3a04",
         "DNS Queries": "semi-dark-green"
       },
       "bars": false,
@@ -1059,6 +1260,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "seriesOverrides": [
         {
           "alias": "DNS Queries Today",
@@ -1206,7 +1414,9 @@
       }
     },
     {
-      "aliasColors": {},
+      "aliasColors": {
+        "CPU Usage": "#ff5f03"
+      },
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -1243,6 +1453,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "PiHole": {
+          "selected": true,
+          "text": "pihole",
+          "value": "pihole"
+        }
+      },
       "seriesOverrides": [
         {
           "alias": "CPU Usage",
@@ -1484,7 +1701,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {
@@ -1504,5 +1721,5 @@
   "timezone": "",
   "title": "PiHole",
   "uid": "W_Y3JFPWk",
-  "version": 18
+  "version": 25
 }
