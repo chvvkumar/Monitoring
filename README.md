@@ -9,28 +9,28 @@ https://grafana.challa.co
 ## Screenshots:
 
 Synology Dashboard
-![Synology Dashboard](../Screenshots/synology.png)
+![Synology Dashboard](./Screenshots/synology.png)
 
 Plex:
-![Plex](../Screenshots/plex.png)
+![Plex](./Screenshots/plex.png)
 
 PiHole Dashboard
-![PiHole Dashboard](../Screenshots/pihole.png)
+![PiHole Dashboard](./Screenshots/pihole.png)
 
 ESXi Dashboard
-![ESXi Dashboard](../Screenshots/esxi.png)
+![ESXi Dashboard](./Screenshots/esxi.png)
 
 Windows
-![Windows](../Screenshots/windows.png)
+![Windows](./Screenshots/windows.png)
 
 Raspberry Pi Dashboard
-![Raspberry Pi Dashboard](../Screenshots/rpi.png)
+![Raspberry Pi Dashboard](./Screenshots/rpi.png)
 
 Docker Dashboard
-![Docker Dashboard](../Screenshots/docker.png)
+![Docker Dashboard](./Screenshots/docker.png)
 
 Asuswrt-Merlin Router (ASUS RT-AC68):
-![ASUS RT-AC68](../Screenshots/router_merlin.png)
+![ASUS RT-AC68](./Screenshots/router_merlin.png)
 
 ## **Monitoring Raspberry Pi stats:**
 
