@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 93,
-  "iteration": 1578709194852,
+  "iteration": 1578714624157,
   "links": [],
   "panels": [
     {
@@ -139,7 +139,7 @@
     {
       "aliasColors": {
         "Cached": "#37872D",
-        "Forwarded": "#C4162A"
+        "Forwarded": "#1F60C4"
       },
       "breakPoint": "50%",
       "cacheTimeout": null,
@@ -170,7 +170,8 @@
       "nullPointMode": "connected",
       "options": {},
       "pieType": "pie",
-      "strokeWidth": 1,
+      "pluginVersion": "6.5.2",
+      "strokeWidth": "5",
       "targets": [
         {
           "aggregation": "Last",
@@ -208,7 +209,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -258,7 +259,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -316,7 +317,7 @@
       "nullPointMode": "connected",
       "options": {},
       "pieType": "pie",
-      "strokeWidth": 1,
+      "strokeWidth": "1",
       "targets": [
         {
           "aggregation": "Last",
@@ -354,7 +355,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -404,7 +405,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -454,7 +455,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -504,7 +505,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -599,7 +600,7 @@
           "measurement": "cpu",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT mean(\"usage_idle\") *-1 + 100 FROM \"cpu\" WHERE (\"host\" =~ /^$PiHole$/ AND \"cpu\" = 'cpu-total') AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "query": "SELECT last(\"usage_idle\") *-1 + 100 FROM \"cpu\" WHERE (\"host\" =~ /^$PiHole$/ AND \"cpu\" = 'cpu-total') AND $timeFilter GROUP BY time($__interval) fill(null)",
           "rawQuery": true,
           "refId": "C",
           "resultFormat": "time_series",
@@ -671,7 +672,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -715,7 +716,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -1106,7 +1107,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -1149,7 +1150,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
               }
             ]
           ],
@@ -1503,5 +1504,5 @@
   "timezone": "",
   "title": "PiHole",
   "uid": "W_Y3JFPWk",
-  "version": 13
+  "version": 18
 }
