@@ -9,54 +9,37 @@ https://grafana.challa.co
 ## Screenshots:
 
 Synology Dashboard
-![Synology Dashboard](https://i.imgur.com/MHz1V5P.png)
+![Synology Dashboard](./Screenshots/synology.png)
 
 Plex:
-![Plex](https://i.imgur.com/YgFJ0C8.png)
+![Plex](./Screenshots/plex.png)
 
-PiHole Dashboard
-![PiHole Dashboard](https://i.imgur.com/YQEgRXA.png)
+PiHole and Raspberry Pi Dashboard
+![PiHole Dashboard](./Screenshots/pihole.png)
 
 ESXi Dashboard
-![ESXi Dashboard](https://i.imgur.com/Vpad5Yb.png)
+![ESXi Dashboard](./Screenshots/esxi.png)
 
 Windows
-![enter image description here](https://i.imgur.com/WA7156r.png)
-
-Raspberry Pi Dashboard
-![Raspberry Pi Dashboard](https://i.imgur.com/8N1BLjC.png)
+![Windows](./Screenshots/windows.png)
 
 Docker Dashboard
-![Docker Dashboard](https://i.imgur.com/cBbMiJY.jpg)
+![Docker Dashboard](./Screenshots/docker.jpg)
 
 Asuswrt-Merlin Router (ASUS RT-AC68):
-![ASUS RT-AC68](https://i.imgur.com/KTKM1yv.png)
+![ASUS RT-AC68](./Screenshots/router_merlin.png)
 
-## **Monitoring Raspberry Pi stats:**
+## **Raspberry Pi**
 
 Download "telegraf_pi_temp.sh" and 'chmod +x' the script. Then call it from within telegraf using "[[inputs.exec]]" (already included telegraf.conf in this repo).
 
-## **Monitoring PiHole:**
-Based on:
-https://justyn.io/blog/monitoring-pihole-with-telegraf-and-influxdb/
-
- 1. Download piholestats.py in this repo to your local machine 
- 2. make  piholestats.py executable by "chmod +x" .
- 3. Add the following to your telegraf.conf inputs
-
-```
-[[inputs.exec]]
-commands = ["/bin/piholestats.py"]
-timeout = "10s"
-data_format = "json"
-name_suffix = "_pihole"
-```
-    
+## **PiHole**
+Change the address of PiHole to your PiHole's address in telegraf.conf   
 
 
  4. Restart telegraf
 
-## **Synology SNMP:**
+## **Synology NAS**
 
 Based on:
 https://github.com/jperillo/Synology_dashboard_grafana
@@ -106,7 +89,7 @@ then
     
 6.  Restart telegraf and test with the '-test' flag. To verify everything is working as expected.
 
-## **VMWare Monitoring**
+## **VMWare**
 
 Telegraf introduced a new vsphere plugin. I will be using this instead of a custom script going forward. This plugin and details can be found here:
 
@@ -116,14 +99,9 @@ Dashboards for the metrics can be found here:
 
 https://github.com/jorgedlcruz/vmware-grafana
 
-Old way:
-~~https://github.com/Oxalide/vsphere-influxdb-go~~
-For history's sake, I am leaving the old telegraf.conf file in this repo. You can find it here:
-https://github.com/chvvkumar/Monitoring/blob/master/old_telegraf.conf
 
-## Monitoring Docker:
+## **Docker**
 
-**
 DockerHost: Synology NAS (DS416Play)
 Telegraf: Raspberry Pi
 
@@ -163,7 +141,7 @@ Add the below lines to your input plugins:
 
 Grafana Dashboard JSON is included in this repository. Simply import it, define your data source and you should be good to go.
 
-## **Plex Monitoring**
+## **Plex**
 
 Plex can be monitored using Verken linked below. I have included my customized dashboard in the repo for reference.
 
